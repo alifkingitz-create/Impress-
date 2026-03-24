@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open When 💌</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="bg-music" loop>
+  <source src="song.mp3">
+</audio>
+
+<button id="music-btn">🎵</button>
+
+<h2 class="title">Open When... 💖</h2>
+
+<div class="letters">
+
+  <div class="letter" onclick="openLetter(1)">Sad</div>
+  <div class="letter" onclick="openLetter(2)">Miss Me</div>
+  <div class="letter" onclick="openLetter(3)">Happy</div>
+  <div class="letter" onclick="openLetter(4)">Angry</div>
+  <div class="letter" onclick="openLetter(5)">Lonely</div>
+
+</div>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+  <span class="back" onclick="closePopup()">⬅</span>
+  <img id="photo">
+  <p id="line"></p>
+</div>
+
+<button class="next" onclick="nextPage()">➡</button>
+
+<script src="script.js"></script>
+
+<script>
+function openLetter(n){
+
+  let images = [
+    "img1.jpg",
+    "img2.jpg",
+    "img3.jpg",
+    "img4.jpg",
+    "img5.jpg"
+  ];
+
+  let texts = [
+    "Tumi amar sobcheye special 💖",
+    "Miss korle amar kache chole asho 🥺",
+    "Tomar smile amar pura duniya 😍",
+    "Rag korle amake jor kore hug dio 😘",
+    "Tumi kokhono akla na, ami sobsomoy achi 💕"
+  ];
+
+  document.getElementById("popup").style.display = "block";
+  document.getElementById("photo").src = images[n-1];
+  document.getElementById("line").innerText = texts[n-1];
+}
+
+function closePopup(){
+  document.getElementById("popup").style.display = "none";
+}
+
+function nextPage(){
+  window.location.href="final.html";
+}
+</script>
+
+</body>
+</html>
