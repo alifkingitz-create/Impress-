@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="bg-music" loop>
+  <source src="song.mp3">
+</audio>
+
+<button id="music-btn">🎵</button>
+
+<div class="card">
+  <h2>Will you see it?</h2>
+
+  <div class="dolls">
+    🐻 🐼
+  </div>
+
+  <button onclick="yes()">yes</button>
+  <button onclick="no()">no</button>
+</div>
+
+<script src="script.js"></script>
+<script>
+function yes(){
+  window.location.href="letters.html"
+}
+function no(){
+  window.location.href="no.html"
+}
+</script>
+
+</body>
+</html>
